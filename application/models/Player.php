@@ -30,7 +30,7 @@ class Player extends CI_Model
             ->count_all_results('korisnici');
     }
 
-//Coda pisao!!
+
     public function check_logIn($data)
     {
         $query=$this->db->select('tip')
@@ -44,6 +44,16 @@ class Player extends CI_Model
         return 0;
     
     }
-//Coda pisao!!!
+
+
+
+    public function getRangList(){
+        $query=$this->db->select('username,poeni')
+            ->from('korisnici')
+            ->where('tip', '1')
+            ->order_by("poeni", "desc")
+            ->get();
+        return $query->result();
+    }
 
 }

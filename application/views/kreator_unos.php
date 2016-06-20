@@ -61,19 +61,19 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Baza pitanja</a>
+                        <a class="page-scroll" href="<?php echo base_url();?>index.php/Moderator/open_Baza_znanja">Baza znanja</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#">O kvizu</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="r#">Rang lista</a>
+                        <a class="page-scroll" href="<?php echo base_url();?>index.php/Moderator/otvoriRangListu">Rang lista</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#">Profil</a>
                     </li>
                     <li>
-                        <a class="page-scroll btn btn-mini btn-primary" href="<?php echo base_url();?>/index.php/Moderator/">Log out</a>
+                        <a class="page-scroll btn btn-mini btn-primary" href="<?php echo base_url();?>/index.php/Moderator/logOut">Log out</a>
                     </li>
                 </ul>
             </div>
@@ -165,7 +165,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Dodaj novo pitanje</h2>
-                    <h3 class="section-subheading text-muted">IZBOROM TIPA PITANJA KORISNIK SE PREUSMERAVA NA STRANICU SA ODGOVARAJUĆOM FORMOM ZA UNOS.</h3>
+                    <h3 class="section-subheading text-muted">IZABERITE TIP PITANJA KOJI ŽELITE DA DODATE.</h3>
                 </div>
             </div>
             <!-- //row2-->
@@ -273,7 +273,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Megamind tim &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2015 Megamind tim &middot; </p>
       </footer>
 
     </div><!-- /.container -->

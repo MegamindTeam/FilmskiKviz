@@ -732,15 +732,23 @@ class Moderator extends CI_Controller {
 
 
     }
+
+    public function otvoriRangListu(){
+        $this->load->database();
+        $this->load->model('Baza_Znanja_M');
+
+        $data['records']=$this->Baza_Znanja_M->getRangList();
+
+
+        $this->load->view('rang_lista_M',$data);
+
+    }
+
+    public function logOut(){
+        session_start();
+
+        session_destroy();
+        redirect("");
+    }
 }
 
-/*
-    <!-- Error msg-->
-                  <?php echo "<div class=\"row text-center\" style='color:red;'>
-                      <div class=\"col-lg-12 text-center\">
-                          $e_odg7
-                      </div>
-                  </div>";?>
-     <!-- //Error msg-->
-
- */

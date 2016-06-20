@@ -85,4 +85,13 @@ class Baza_znanja_M extends CI_Model
     function fetch_questions_idS(){
         return  $this->db->count_all_results('pitanjeS');
     }
+
+    public function getRangList(){
+        $query=$this->db->select('username,poeni')
+            ->from('korisnici')
+            ->where('tip', '1')
+            ->order_by("poeni", "desc")
+            ->get();
+        return $query->result();
+    }
 }

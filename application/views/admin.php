@@ -64,10 +64,13 @@
                         <a class="page-scroll" href="#">O kvizu</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="rang_lista.html">Rang lista</a>
+                        <a class="page-scroll" href="<?php echo base_url();?>index.php/Admin/otvoriRangListu">Rang lista</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#">Profil</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll btn btn-mini btn-primary" href="<?php echo base_url();?>index.php/Admin/logOut">Log out</a>
                     </li>
                 </ul>
             </div>
@@ -100,7 +103,7 @@
               <br><br><br><br>
 
 
-              <table class="table table">
+              <table class="table table" name="tabela" >
               <thead>
                 <tr>
                   <th>&nbsp;</th>
@@ -225,7 +228,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Megamind tim &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2016 Megamind tim &middot; 
       </footer>
 
     </div><!-- /.container -->
@@ -245,7 +248,7 @@
     
      <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="<?php echo base_url();?>bootstrap-3.3.6/bootstrap-3.3.6/docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="<?php echo base_url();?>bootstrap-3.3.6/bootstrap-3.3.6/docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="<?php echo base_url();?>bootstrap-3.3.6/bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
   
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

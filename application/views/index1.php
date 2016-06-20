@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Megamind kviz | Glavna stranica</title>
+    <title>Megamind kviz | Početna stranica</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url();?>bootstrap-3.3.6/bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -75,10 +75,10 @@
                         <a class="page-scroll" href="<?php echo base_url();?>index.php/Welcome/registerOpen/">Registruj se</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">O kvizu</a>
+                        <a class="page-scroll" href="#">O kvizu</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="rang_lista.html">Rang lista</a>
+                        <a class="page-scroll" href="<?php echo base_url();?>index.php/Welcome/openRankList">Rang lista</a>
                     </li>
 
                 </ul>
@@ -99,31 +99,34 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <img class="first-slide" src="<?php echo base_url();?>projekatPSI/img/grey.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
+				<img src="<?php echo base_url();?>projekatPSI/img/clapperboard.png">
               <h1>Zabavi se i osvoji bioskopske karte!</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p>Proverite znanje, zabavite se, a usput se spremite i sakupite poene za igru Filmski dvoboj! Svako tačno odgovoreno pitanje nosi 1p, netačno -1p, a ako preskočite stepenicu dobijate 0p.</p>
               <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>index.php/Welcome/registerOpen/" role="button">Registruj se</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <img class="second-slide" src="<?php echo base_url();?>projekatPSI/img/blue.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
+			<img src="<?php echo base_url();?>projekatPSI/img/favorite.png">
               <h1>Oceni pitanja.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>index.php/Welcome/registerOpen/" role="button">Vidi</a></p>
+                <p>Ocenjuj pitanja u našoj bazi znanja i povećaj svoju šansu da pobediš!</p>
+                <p>&nbsp;</p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <img class="third-slide" src="<?php echo base_url();?>projekatPSI/img/gb.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
+			<img src="<?php echo base_url();?>projekatPSI/img/crown.png">
               <h1>Stepenice ili Filmski dvoboj?</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+               <p>Da biste učestvovali u Filmskom dvoboju morate sakupiti makar 5p u igri Stepenice! Da biste učestvovali, morate uložiti deo osvojenih poena. U slučaju pobede, poeni Vam se dupliraju. U suprotnom, gubite uložene poene.</p>
               <p><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>index.php/Welcome/registerOpen/" role="button">Igraj</a></p>
             </div>
           </div>
@@ -149,22 +152,22 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="<?php echo base_url();?>projekatPSI/img/castle.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Stepenice</h2>
-          <p>Link vodi na stranicu igre Stepenice, ukoliko je korisnik prijavljen. Ukoliko korisnik nije prijavljen, link vodi na stranicu za registraciju.</p>
-          <p><a class="btn btn-default" href="<?php echo base_url();?>#login-form" role="button">Pročitaj više &raquo;</a></p>
+            <p>Proverite znanje, zabavite se, a usput se spremite i sakupite poene za igru Filmski dvoboj! Svako tačno odgovoreno pitanje nosi 1p, netačno -1p, a ako preskočite dobijate 0p.</p>
+          <p><a class="btn btn-default" href="<?php echo base_url();?>#login-form" role="button">Otvori &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="<?php echo base_url();?>projekatPSI/img/fencing.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Filmski dvoboj</h2>
-          <p>Link vodi na stranicu igre Filmski dvoboj, ukoliko je korisnik prijavljen. Ukoliko korisnik nije prijavljen, link vodi na stranicu za registraciju.</p>
-          <p><a class="btn btn-default" href="<?php echo base_url();?>#login-form" role="button">Pročitaj više &raquo;</a></p>
+            <p>Da biste učestvovali morate sakupiti makar 10p u igri Stepenice! Da biste učestvovali, morate uložiti deo osvojenih poena. U slučaju pobede, poeni Vam se dupliraju. U suprotnom, gubite uložene poene.</p>
+          <p><a class="btn btn-default" href="<?php echo base_url();?>#login-form" role="button">Otvori &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Osmisli pitanja</h2>
-          <p>Link vodi na stranicu za dodavanje pitanja, ukoliko je korisnik prijavljen. Ukoliko korisnik nije prijavljen, link vodi na stranicu za registraciju i prijavljivanje.</p>
-          <p><a class="btn btn-default" href="<?php echo base_url();?>#login-form" role="button">Pročitaj više &raquo;</a></p>
+          <img class="img-circle" src="<?php echo base_url();?>projekatPSI/img/listr.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Rang lista</h2>
+            <p>Vidi rang listu najboljih igraca. Vidi svoje šanse da osvojiš nagrade!</p><p>&nbsp;</p>
+          <p><a class="btn btn-default" href="<?php echo base_url();?>index.php/Welcome/openRankList" role="button">Otvori &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -225,7 +228,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Megamind tim &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2016 Megamind tim &middot; </p>
       </footer>
 
     </div><!-- /.container -->

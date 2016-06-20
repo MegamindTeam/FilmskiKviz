@@ -31,7 +31,6 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="<?php echo base_url();?>bootstrap-3.3.6/bootstrap-3.3.6/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
  <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
     <!-- InstanceBeginEditable name="head" -->
     <!-- InstanceEndEditable -->
 </head>
@@ -67,13 +66,13 @@
                         <a class="page-scroll" href="#">O kvizu</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Rang lista</a>
+                        <a class="page-scroll" href="<?php echo base_url();?>index.php/Moderator/otvoriRangListu">Rang lista</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="<?php echo base_url();?>/index.php/Moderator/">Profil</a>
                     </li>
                     <li>
-                        <a class="page-scroll btn btn-mini btn-primary" href="<?php echo base_url();?>/index.php/Moderator/">Log out</a>
+                        <a class="page-scroll btn btn-mini btn-primary" href="<?php echo base_url();?>/index.php/Moderator/logOut">Log out</a>
                     </li>
                 </ul>
             </div>
@@ -156,7 +155,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Megamind tim &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2016 Megamind tim &middot; </p>
       </footer>
 
     </div><!-- /.container -->

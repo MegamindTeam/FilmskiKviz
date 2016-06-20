@@ -67,13 +67,13 @@
                         <a class="page-scroll" href="#">O kvizu</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Rang lista</a>
+                        <a class="page-scroll" href="<?php echo base_url();?>index.php/Moderator/otvoriRangListu">Rang lista</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="<?php echo base_url();?>/index.php/Moderator/">Profil</a>
                     </li>
                     <li>
-                        <a class="page-scroll btn btn-mini btn-primary" href="<?php echo base_url();?>/index.php/Moderator/">Log out</a>
+                        <a class="page-scroll btn btn-mini btn-primary" href="<?php echo base_url();?>/index.php/Moderator/logOut">Log out</a>
                     </li>
                 </ul>
             </div>
@@ -83,18 +83,7 @@
         <!-- /.container-fluid -->
     </nav>
     
-    <!-- Header -->
-	<!--
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Dobrodošli!</div>
-                <div class="intro-heading">Proverite svoje filmsko znanje</div>
-                
-            </div>
-        </div>
-    </header>
--->
+
  <!-- InstanceBeginEditable name="editable_containter" -->
 
     <!-- Services Section -->
@@ -104,7 +93,7 @@
 
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Dodaj novo pitanje</h2>
-                    <h3 class="section-subheading text-muted">Pitanje sa više ponuđenih i jednim tačnim odgovorom.</h3>
+                    <h3 class="section-subheading text-muted">Pitanje bez ponuđenih odgovora.</h3>
                     <h4 class="section-subheading text-muted"><?php echo $e_uspeh;?></h4>
                 </div>
             </div>
@@ -164,16 +153,6 @@
 
       <hr class="featurette-divider" />
 
-      <div class="row featurette">
-        <div class="col-md-12">
-          <h2 class="featurette-heading"><span class="text-muted">Pravila za dodavanje pitanja.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. </p>
-          <p class="lead">&nbsp;</p>
-          <p class="lead">&nbsp;</p>
-        </div>
-       
-      </div>
-
       
       <!-- /END THE FEATURETTES -->
 <!-- InstanceEndEditable -->
@@ -181,7 +160,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Megamind tim &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2016 Megamind tim &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
     </div><!-- /.container -->

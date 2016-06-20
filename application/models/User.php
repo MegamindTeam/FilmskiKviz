@@ -64,7 +64,7 @@ class User extends CI_Model
         return $query->result();
     }
 
-    //Coda menjao!!
+   
     public function get($user){
         $query=$this->db->select('*')
             ->from('korisnici')
@@ -80,7 +80,7 @@ class User extends CI_Model
         
     }
 
-    //Coda menjao!
+  
 
     public function checkType($user,$tip){
         return $this->db->where('username', $user)
@@ -90,5 +90,13 @@ class User extends CI_Model
 
     }
 
+    public function getRangList(){
+        $query=$this->db->select('username,poeni')
+            ->from('korisnici')
+            ->where('tip', '1')
+            ->order_by("poeni", "desc")
+            ->get();
+        return $query->result();
+    }
     
 }

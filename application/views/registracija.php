@@ -67,7 +67,7 @@
                         <a class="page-scroll" href="#">O kvizu</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="rang_lista.html">Rang lista</a>
+                        <a class="page-scroll" href="<?php echo base_url();?>index.php/Welcome/openRankList">Rang lista</a>
                     </li>
                 </ul>
             </div>

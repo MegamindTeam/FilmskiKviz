@@ -61,13 +61,16 @@
                         <a href="#"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Registruj se</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#">O kvizu</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="rang_lista.html">Rang lista</a>
+                        <a class="page-scroll" href="<?php echo base_url();?>/index.php/Admin/otvoriRangListu">Rang lista</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="<?php echo base_url();?>/index.php/Admin/">Profil</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll btn btn-mini btn-primary" href="<?php echo base_url();?>/index.php/Admin/logOut">Log out</a>
                     </li>
                 </ul>
             </div>
@@ -77,18 +80,7 @@
         <!-- /.container-fluid -->
     </nav>
     
-    <!-- Header -->
-	<!--
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Dobrodošli!</div>
-                <div class="intro-heading">Proverite svoje filmsko znanje</div>
-                
-            </div>
-        </div>
-    </header>
-	-->
+ 
 
  <!-- InstanceBeginEditable name="editable_containter" -->
 
@@ -180,7 +172,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Megamind tim &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2016 Megamind tim &middot; </p>
       </footer>
 
     </div><!-- /.container -->

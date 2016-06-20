@@ -59,7 +59,7 @@ class Admin extends CI_Controller
 
     }
 
-    //Coda menjao!
+    
     public function otvoriDodaj(){
         session_start();
         if($_SESSION['tip']!=3){
@@ -74,7 +74,7 @@ class Admin extends CI_Controller
             'e_prezime' => ""
         ));
     }
-    //Coda menjao!
+    
 
     public function dodaj(){
         session_start();
@@ -194,7 +194,7 @@ class Admin extends CI_Controller
 
     }
 
-    //Coda menjao!
+    
     public function obrisi(){
         //dohvati korisnika
         session_start();
@@ -230,11 +230,11 @@ class Admin extends CI_Controller
 
     }
     
-    //Coda menjao!
+    
 
 
 
-    //Jovana
+    
     public function izmeni(){
         session_start();
         if($_SESSION['tip']!=3){
@@ -293,113 +293,18 @@ class Admin extends CI_Controller
 
 
     }
-    //Jovana
-
     
-    
-    //Coda menjao! PROFIL!!!! ProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfil
 
-
-    public function otvoriProfil(){
-        $user='coda';
-
-        $this->load->database();
-        $this->load->model('User');
-        
-        $data['records']=$this->User->get($user);
-        
-        $this->load->view('profil',$data);
-    }
-    
-    public function izmeniProfil(){
-        $user='coda';
+    public function otvoriRangListu(){
         $this->load->database();
         $this->load->model('User');
 
-        $data = array(
-            'username' => $this->input->post('inputName'),
-            'passwordOld' => $this->input->post('inputPasswordOld'),
-            'email' => $this->input->post('inputEmail3'),
-            'password'=>$this->input->post('inputPassword'),
-            'passwordR'=>$this->input->post('inputPasswordAgain')
-        );
+        $data['records']=$this->User->getRangList();
 
-        $ok=true;
-        $type=0;
-        $err=array(
-            'e_username' => "",
-            'e_password' => "",
-            'e_email' => "",
-            'e_ime' => "",
-            'e_prezime' => ""
-        );
 
-        //USERNAME
+        $this->load->view('rang_lista_admin',$data);
 
-        if(strlen($data['username'])>0) {
-            if (empty($data['username'])) {
-                $err['e_username'] = "Korisničko ime nije dozvoljene dužine[1-20]";
-                $ok = false;
-            } elseif (!ctype_alnum($data['username'])) {
-                $err['e_username'] = "Korisničkno ime može da sadrži samo slova i brojeve";
-                $ok = false;
-            } elseif (strlen($data['username']) > 20) {
-                $err['e_username'] = "Korisničko ime nije dozvoljene dužine [1-20]";
-                $ok = false;
-            } elseif ($this->Player->check_unique_user($data['username']) != 0) {
-                $err['e_username'] = "Zauzeto korisničko ime";
-                $ok = false;
-            }
-             else $type+=1;
-        }
-
-        //EMAIL
-
-        if(strlen($data['email'])>0) {
-            if (empty($data['email'])) {
-                $err['e_email'] = "E-mail je obavezan";
-                $ok = false;
-            } elseif (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-                $err['e_email'] = "E-mail nije u validnom formatu";
-                $ok = false;
-            } elseif ($this->Player->check_unique_email($data['email']) != 0) {
-                $err['e_email'] = "Zauzet e-mail";
-                $ok = false;
-            }
-             else $type+=3;
-        }
-
-        //PASSWORD
-
-        if(strlen($data['password'])>0) {
-            if ((strlen($data['password']) > 16) or (strlen($data['password']) < 8)) {
-                $err['e_password'] = "Lozinka nije dozvoljene dužine [8-16]";
-                $ok = false;
-            } elseif (!ctype_alnum($data['password'])) {
-                $err['e_password'] = "Lozinka može da sadrži samo slova i brojeve";
-                $ok = false;
-            } elseif (strcmp($data['password'], $data['passwordR']) != 0) {
-                $err['e_password'] = "Ponovljena loznika se ne podudara";
-                $ok = false;
-            }
-            else $type+=5;
-        }
-
-        $data2=$this->User->get($user);
-
-        $data2['username']=$data['email'];
-
-        $data['records']=$this->User->get($data2);
-
-        
-
-        $this->load->view('index1');
     }
-
-
-
-
-    //Coda menjao! PROFIL!!!!ProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfilProfil
 
     public function dodajKreatora(){
         session_start();
@@ -511,5 +416,10 @@ class Admin extends CI_Controller
 
     }
 
-    
+    public function logOut(){
+        session_start();
+
+        session_destroy();
+        redirect("");
+    }
 }

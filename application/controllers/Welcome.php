@@ -59,29 +59,39 @@ class Welcome extends CI_Controller {
 			'username' => "Uspesno ste ulogovani",
 			'password' => ""
 		);
-		$i = $this->Player->check_logIn($data);
-
-		if ($i == 0) {
-			$err['username'] = "Nemate nalog";
-			$err['password'] = "0";
+	    if (!ctype_alnum($data['username'])){
+			$err['e_username']="Korisničkno ime može da sadrži samo slova i brojeve";
 			$this->load->view('index1',$err);
-		} elseif ($i == 1) {
-			$err['password'] = "1";
-			$this->load->view('proba', $err);
-		} elseif ($i == 2) {
-			session_start();
-			$_SESSION['username']=$data['username'];
-			$_SESSION['tip']=2;
-			redirect("/Moderator");
-		} elseif ($i == 3) {
-			session_start();
-			$_SESSION['username']=$data['username'];
-			$_SESSION['tip']=3;
-			redirect("/Admin");
-		} elseif ($i == 4) {
-			$err['password'] = "4";
-			$this->load->view('proba', $err);
+		}else {
 
+			$i = $this->Player->check_logIn($data);
+
+			if ($i == 0) {
+				$err['username'] = "Nemate nalog";
+				$err['password'] = "0";
+				$this->load->view('index1', $err);
+			} elseif ($i == 1) {
+				session_start();
+				$_SESSION['username'] = $data['username'];
+				$_SESSION['tip'] = 1;
+				$_SESSION['igra'] = 0;
+				redirect("/Igrac");
+			} elseif ($i == 2) {
+				session_start();
+				$_SESSION['username'] = $data['username'];
+				$_SESSION['tip'] = 2;
+				redirect("/Moderator");
+			} elseif ($i == 3) {
+				session_start();
+				$_SESSION['username'] = $data['username'];
+				$_SESSION['tip'] = 3;
+				redirect("/Admin");
+			} elseif($i == 4) {
+				$err['username'] = "Banovani ste";
+				$err['password'] = "0";
+				$this->load->view('index1', $err);
+
+			}
 		}
 
 	}
@@ -192,5 +202,14 @@ class Welcome extends CI_Controller {
 
 	}
 
+	public function openRankList(){
+
+		$this->load->database();
+		$this->load->model('Player');
+
+		$data['records']=$this->Player->getRangList();
+
+		$this->load->view('rang_lista',$data);
+	}
 
 }
